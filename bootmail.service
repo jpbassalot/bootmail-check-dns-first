@@ -1,0 +1,13 @@
+Description=Sending Alert Emails on System shutdown and startup.
+Before=shutdown.target reboot.target
+Wants=network-online.target wait-for-dns.service
+After=network-online.target wait-for-dns.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/root/scripts/bootmail.sh startup
+ExecStop=/root/scripts/bootmail.sh shutdown
+
+[Install]
+WantedBy=multi-user.target
