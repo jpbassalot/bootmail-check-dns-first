@@ -2,6 +2,8 @@
 
 Inspired by - https://github.com/jmkim/bootmail
 
+Send email alerts when your linux server shuts down and starts up.
+
 Tweaked and simplified to make sure DNS services work before sending any mail. 
 
 
